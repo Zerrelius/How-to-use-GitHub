@@ -151,4 +151,9 @@ ___
 
 Mit Pull Requests auf der GitHub Seite können wir dann unsere jeweiligen Branches zum Main Branch wieder hinzufügen.
 
+Lokal wäre der Befehl wie folgt:
+```bash
+git merge (Branch Name)
+```
+So führen wir unseren Feature Branch wieder dem Main Branch hinzu.
 ___
