@@ -35,6 +35,7 @@ Nun müssen wir zu aller erst, einmalig, erste Einstellungen machen. Als Beispie
 ```bash
 git config --global user.name "DeinUserName"
 git conifg --global user.email "DeineEmailAdresse"
+git config --global init.defaultBranch main
 ```
 Mit diesen beiden Befehlen setzen wir global, in unserem System, für unser Git, die Einstellungen unseres Usernamen und unserer Email Adresse.
 
@@ -100,4 +101,54 @@ Auf GitHub gehen wir dann in unsere Account Settings. Dort fügen wir im Unterpu
 
 ___
 
+## Verbindung mit dem GitHub Repository
 
+Mit dem folgenden Command verbinden wir dann unser lokales Repository mit dem Repository auf GitHub.
+```bash
+git remote add origin git@github.com:USERNAME/PROJEKT-NAME.git
+```
+In diesem Falle müssen wir den Part mit dem git@github.com:USERNAME/PROJEKT-NAME.git entsprechend ersetzen mit unserem SSH Link.
+
+Damit verbinden wir unser lokales Git mit unserem GitHub Repository mithilfe einer SSH Verbindung.
+
+___
+
+## Push and Pull
+
+Mit den Befehlen ```git push -u origin main``` fügen wir unser lokales Repository zu unserem GitHub Repository hinzu.
+```bash
+git push -u origin main
+```
+Angenommen wir entwickeln nun mit anderen Entwicklern und jemand anderes hat einen Push ausgeführt, können wir uns die aktuelle Version mit ```git pull``` herunterladen.
+```bash
+git pull
+```
+___
+
+## Branching
+
+Will man nun an mehreren Features Gleichzeitig arbeiten, benutzen wir Branches um Merge Konflikte zu vermeiden. Sprich damit nicht Dateien immer wieder überschrieben werden.
+Mit dem Command
+```bash
+git branch -m feature/(Name)
+```
+erstellen wir ein neuen Feature Branch. Hierbei muss (Name) mit dem Namen des jeweiligen Features ausgetauscht werden.
+
+Mit dem Befehl:
+```bash
+git checkout (name)
+```
+können wir zwischen den entsprechendes Branches hin und her wechseln. Ebenso geht aber auch der Befehl ```git switch (name)```. Wollen wir vom Main Branch in den Feature Branch wechseln würde der Befehl wie folgt aussehen:
+```bash
+git checkout feature/EinTollesFeature
+```
+
+Später können wir diese Branches dann zu unserem Main Branch wieder hinzufügen.
+
+___
+
+## Zusammenführen von Branches
+
+Mit Pull Requests auf der GitHub Seite können wir dann unsere jeweiligen Branches zum Main Branch wieder hinzufügen.
+
+___
