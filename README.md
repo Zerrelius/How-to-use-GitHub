@@ -130,7 +130,7 @@ ___
 Will man nun an mehreren Features Gleichzeitig arbeiten, benutzen wir Branches um Merge Konflikte zu vermeiden. Sprich damit nicht Dateien immer wieder überschrieben werden.
 Mit dem Command
 ```bash
-git branch -m feature/(Name)
+git branch feature/(Name)
 ```
 erstellen wir ein neuen Feature Branch. Hierbei muss (Name) mit dem Namen des jeweiligen Features ausgetauscht werden.
 
