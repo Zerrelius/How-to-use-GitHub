@@ -134,6 +134,11 @@ git branch feature/(Name)
 ```
 erstellen wir ein neuen Feature Branch. Hierbei muss (Name) mit dem Namen des jeweiligen Features ausgetauscht werden.
 
+Alternativ können wir auch direkt mit einem Checkout einen neuen Branch erstellen.
+```bash
+git checkout -b (name)
+```
+
 Mit dem Befehl:
 ```bash
 git checkout (name)
